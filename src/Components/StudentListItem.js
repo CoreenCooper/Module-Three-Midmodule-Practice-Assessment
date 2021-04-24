@@ -9,7 +9,7 @@ const StudentListItem = ({student, addStudent}) => {
     <img src={image} alt="Pic"/>
     <p>Bio: {bio}</p>
     <p>GPA: {GPA.toFixed(2)}</p>
-    <button onClick={()=> addStudent(student)}>add To Class</button>
+    <button onClick={()=> addStudent(student)}>Add To Class</button>
 </li>
     )
 }

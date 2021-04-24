@@ -22,8 +22,12 @@ class TeacherEnrollment extends Component {
       window.alert(`Input is invalid`);
     } else if (phoneNumber.length != 10 || includesLetters(phoneNumber)) {
       window.alert(`Phone number is not valid`);
-    } else if (zipCode.length !== 5 && includesLetters(zipCode)) {
+    } else if (zipCode.length !== 5 || includesLetters(zipCode)) {
       window.alert(`Zip code is not valid`);
+    } else {
+      window.alert(`You are now the teacher
+      You have ${studentCount} students
+      The average GPA is ${averageGPA.toFixed(2)}`);
     }
   };
 
@@ -43,19 +47,33 @@ class TeacherEnrollment extends Component {
 
           <label htmlFor="subject">Subject</label>
           <input
-            id="name"
-            name="name"
+            id="subject"
+            name="subject"
             onChange={this.handleChange}
-            value={name}
+            value={subject}
           />
-          <label htmlFor="email">email</label>
+          <label htmlFor="email">Email</label>
           <input
-            id="name"
-            name="name"
+            id="email"
+            name="email"
             onChange={this.handleChange}
-            value={name}
+            value={email}
           />
-          <button>submitˇ</button>
+          <label htmlFor="zipCode">Zip Code</label>
+          <input
+            id="zipCode"
+            name="zipCode"
+            onChange={this.handleChange}
+            value={zipCode}
+          />
+          <label htmlFor="phoneNumber">Phone Number</label>
+          <input
+            id="phoneNumber"
+            name="phoneNumber"
+            onChange={this.handleChange}
+            value={phoneNumber}
+          />
+          <button>Teach Class</button>
         </form>
       </section>
     );
