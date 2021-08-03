@@ -31,7 +31,7 @@ class App extends React.Component {
     // const averageGPA = roster.reduce((sum, student) => sum + student.GPA, 0) / roster.length
 
     return (
-      <div class="App">
+      <div className="App">
         <StudentList addStudent={this.addStudent} />
         <TeacherEnrollment
           averageGPA={averageGPA || 0}

@@ -1,11 +1,5 @@
 import { Component } from "react";
-
-const includesLetters = (string) => {
-  const digits = "0123456789";
-  for (const char of string) {
-    if (!digits.includes(char)) return true;
-  }
-};
+import includesLetters from "../helpers/helpers"
 
 class TeacherEnrollment extends Component {
   state = { name: "", subject: "", email: "", zipCode: "", phoneNumber: "" };
